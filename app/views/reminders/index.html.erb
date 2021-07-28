@@ -1,0 +1,19 @@
+<% provide(:title, "Dashboard") %>
+
+<%= render "shared/app_sidebar" %>
+
+<section id="main-dashboard-content">
+  <h2 id="welcome-title">Single Month View</h1>
+  <p class="welcome-title-user"> Hi, Chris </p>
+  <section id="properties-section">
+    <div class="properties-actions">
+    </div>
+
+  </section>
+  <section>
+    <%= content_tag :div, data: { controller: "calendar" } do %>
+      <%= tag :div, data: { target: "calendar.calendar" } %>
+    <%end%>
+  </section>
+</section>
+

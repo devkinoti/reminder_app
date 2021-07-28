@@ -1,0 +1,325 @@
+
+@import "normalize";
+@import "dashboard";
+
+
+*,*:focus,*:hover{
+  outline:none;
+}
+
+a{
+  text-decoration:none;
+}
+@font-face {
+  font-family:'Lato-Regular';
+  src:font-url('Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+  font-family:"Lato-Light";
+  src:font-url('Lato/Lato-Light.ttf');
+}
+
+@font-face {
+
+  font-family:"Lato-Italic";
+  src:font-url('Lato/Lato-Italic.ttf');
+}
+
+@font-face {
+  font-family:"Lato-LightItalic";
+  src:font-url('Lato/Lato-LightItalic.ttf');
+}
+@font-face {
+
+  font-family:"Lato-Bold";
+  src:font-url('Lato/Lato-Bold.ttf');
+}
+@font-face {
+  font-family:"Lato-Black";
+  src:font-url('Lato/Lato-Black.ttf');
+}
+@font-face {
+
+  font-family:"Lato-BlackItalic";
+  src:font-url('Lato/Lato-BlackItalic.ttf');
+}
+@font-face {
+  font-family:"Lato-Thin";
+  src:font-url('Lato/Lato-Thin.ttf');
+}
+@font-face {
+
+  font-family:"Lato-ThinItalic";
+  src:font-url('Lato/Lato-ThinItalic.ttf');
+} 
+
+
+@font-face {
+  font-family:'OpenSans';
+  src:font-url('OpenSans/OpenSans-Regular.ttf');
+
+
+} 
+
+@font-face {
+  font-family:'OpenSans-Bold';
+  src:font-url('OpenSans/OpenSans-Bold.ttf');
+} 
+
+
+@font-face {
+  font-family:'OpenSans-Light';
+  src:font-url('OpenSans/OpenSans-Light.ttf');
+} 
+
+@font-face {
+  font-family:'OpenSans-SemiBold';
+  src:font-url('OpenSans/OpenSans-SemiBold.ttf');
+} 
+
+
+
+
+.custom_gritter_notice {
+  background: linear-gradient(0deg, rgba(71,209,149,1) 34%, rgba(30,204,160,1) 85%);
+  border-radius: 5px;
+  text-align: center;
+  font-family:OpenSans;
+  -webkit-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+  -moz-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+  box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+  z-index:9999;
+  
+}
+
+.custom_gritter_notice .gritter-close {
+display:none;
+position:absolute;
+top:5px;
+left:3px;
+cursor:pointer;
+width:30px;
+height:30px;
+filter:inherit; // ie8 fix
+color:rgba(71,209,149,1);
+}
+
+.custom_gritter_notice .gritter-close {
+background:url('gritter-close.png') no-repeat;
+text-indent: -9999px;
+}
+
+
+
+.custom_gritter_info {
+background: linear-gradient(0deg, rgb(71, 96, 209) 34%, rgb(30, 100, 204) 85%);
+border-radius: 5px;
+text-align: center;
+font-family:OpenSans;
+-webkit-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+-moz-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+z-index:9999;
+
+}
+
+.custom_gritter_info .gritter-close {
+display:none;
+position:absolute;
+top:5px;
+left:3px;
+cursor:pointer;
+width:30px;
+height:30px;
+filter:inherit; // ie8 fix
+color:rgb(71, 96, 209);
+}
+
+.custom_gritter_info .gritter-close {
+background:url('gritter-close.png') no-repeat;
+text-indent: -9999px;
+}
+
+.custom_gritter_error {
+background: linear-gradient(0deg, rgba(209,71,71,1) 32%, rgba(204,30,38,1) 85%);
+border-radius: 5px;
+text-align: center;
+font-family:OpenSans;
+-webkit-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+-moz-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+z-index:9999;
+
+}
+
+
+.custom_gritter_error .gritter-close {
+display:none;
+position:absolute;
+top:5px;
+left:3px;
+cursor:pointer;
+width:30px;
+height:30px;
+filter:inherit; // ie8 fix
+color:rgba(209,71,71,1);
+}
+
+.custom_gritter_error .gritter-close {
+background:url('gritter-close.png') no-repeat;
+text-indent: -9999px;
+}
+
+
+
+.custom_gritter_alert {
+background: linear-gradient(0deg, rgb(209, 71, 71) 32%, rgb(204, 30, 30) 85%);
+border-radius: 5px;
+text-align: center;
+font-family:OpenSans;
+-webkit-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+-moz-box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+box-shadow: 4px 10px 16px -2px rgba(166,166,166,1);
+z-index:9999;
+
+}
+
+.custom_gritter_alert .gritter-close {
+display:none;
+position:absolute;
+top:5px;
+left:3px;
+cursor:pointer;
+width:30px;
+height:30px;
+filter:inherit; // ie8 fix
+color:rgb(209, 71, 71);
+}
+
+.custom_gritter_alert .gritter-close {
+background:url('gritter-close.png') no-repeat;
+text-indent: -9999px;
+}
+
+#gritter-notice-wrapper {
+  position:fixed;
+  top:20px;
+  right:20px;
+  width:301px;
+  z-index:9999;
+  
+  &.top-left {
+    left: 20px;
+    right: auto;
+  }
+  
+  &.bottom-right {
+    top: auto;
+    left: auto;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  &.bottom-left {
+    top: auto;
+    right: auto;
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+.gritter-item-wrapper {
+  position:relative;
+  margin:0 0 10px 0;
+  background:url(asset-url('ie-spacer.gif')); // ie7/8 fix
+  z-index:9999;
+}
+
+.gritter-top {
+  background:url(asset-url('gritter.png')) no-repeat left -30px;
+  height:10px;
+  z-index:9999;
+}
+.hover .gritter-top {
+  background-position:right -30px;
+}
+.gritter-bottom {
+  background:url(asset-url('gritter.png')) no-repeat left bottom;
+  height:8px;
+  margin:0;
+}
+.hover .gritter-bottom {
+  background-position: bottom right;
+}
+
+.gritter-item {
+  display:block;
+  color:#eee;
+  padding:2px 11px 8px 11px;
+  font-size: 12px;
+  font-family:OpenSans;
+  filter:inherit; // ie8 fix
+  z-index:9999;
+  
+  &.gritter-css2 {
+    background:url(asset-url('gritter.png')) no-repeat left -40px;
+  }
+  &.gritter-css3 {
+    background:rgba(0, 0, 0, 0.8);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+  
+  p {
+    padding:0;
+    margin:0;
+  }
+}
+.hover .gritter-item.gritter-css2 {
+  background-position:right -40px;
+}
+.hover .gritter-item.gritter-css3 {
+  padding:10px 9px 14px 9px;
+  border: solid 2px #fff;
+}
+
+.gritter-close {
+  display:none;
+  position:absolute;
+  top:5px;
+  left:3px;
+  cursor:pointer;
+  width:30px;
+  height:30px;
+  filter:inherit; // ie8 fix
+}
+.gritter-css2 .gritter-close {
+  background:url(asset-url('gritter.png')) no-repeat left top;
+}
+.gritter-css3 .gritter-close {
+  background:url('gritter-close.png') no-repeat;
+}
+
+.gritter-title {
+  font-size:16px;
+  font-family:OpenSans-SemiBold;
+  padding:0 0 7px 0;
+  display:block; /* Not supported by IE :( */
+}
+.gritter-image {
+  width:48px;
+  height:48px;
+  float:left;
+}
+.gritter-with-image,
+.gritter-without-image {
+  padding:0 0 5px 0;
+}
+.gritter-with-image {
+  width:220px;
+  float:right;
+}
