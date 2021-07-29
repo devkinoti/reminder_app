@@ -16,26 +16,26 @@
       <%= content_tag :div, class: 'modal', data: { target: 'calendar.modal' } do %>
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <%= form_with model: @new_reminder, local: true do |form| %>
+            <%= form_with model: Event.new, local: true do |form| %>
               <div class="modal-body">
                 <div class="field">
-                  <%= form.label :what_dont_you_want_to_forget %>
-                  <%= form.text_field :title, placeholder: "Attend Brian's birthday" %>
+                  <%= form.label :title %>
+                  <%= form.text_field :title %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :when_does_reminder_start? %>
-                  <%= form.text_field :start_time, data: { target: "calendar.start_time" }%>
+                  <%= form.label :all_day %>
+                  <%= form.check_box :all_day %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :when_does_reminder_end? %>
-                  <%= form.text_field :end_time, data: { target: "calendar.end_time" } %>
+                  <%= form.label :start_time %>
+                  <%= form.datetime_select :start_time %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :when_do_you_want_me_to_remind_you? %>
-                  <%= form.datetime_select :notification_time %>
+                  <%= form.label :end_time %>
+                  <%= form.datetime_select :end_time %>
                 </div>
 
               </div>

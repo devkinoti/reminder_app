@@ -11,10 +11,11 @@ export default class extends Controller {
   connect() {
     let _this = this
     let calendar = new Calendar(this.calendarTarget, {
-      events: '/reminders.json',
+      events: '/events.json',
       editable: true,
       navLinks: true,
-      headerToolbar: { center: 'dayGridMonth,timeGridWeek,timeGridDay' },
+      dayMaxEvents: true,
+      headerToolbar: { center: 'dayGridMonth,timeGridDay' },
       plugins: [dayGridPlugin,timeGridPlugin,interactionPlugin],
       navLinkDayClick: function(date, jsEvent) {
         _this.modalTarget.style.display = "block"
@@ -23,13 +24,13 @@ export default class extends Controller {
       },
       eventClick: function (info) {
         info.jsEvent.preventDefault()
-        Turbolinks.visit(info.reminder.extendedProps.show_url)
+        Turbolinks.visit(info.event.extendedProps.show_url)
       },
       eventDrop: function (info) {
         let data = _this.data(info)
         Rails.ajax({
-          type: 'PUT',
-          url: info.reminder.url,
+          type: 'PATCH',
+          url: info.event.url,
           data: new URLSearchParams(data).toString()
         })
       },
@@ -37,7 +38,7 @@ export default class extends Controller {
         let data = _this.data(info)
         Rails.ajax({
           type: 'PUT',
-          url: info.reminder.url,
+          url: info.event.url,
           data: new URLSearchParams(data).toString()
         })
       },
@@ -47,8 +48,8 @@ export default class extends Controller {
 
   data(info) {
     return {
-      "reminder[start_time]": info.reminder.start,
-      "reminder[end_time]": info.reminder.end,
+      "event[start_time]": info.event.start,
+      "event[end_time]": info.event.end,
     }
   }
 }
