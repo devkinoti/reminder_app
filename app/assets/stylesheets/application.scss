@@ -1,6 +1,7 @@
 
 @import "normalize";
 @import "dashboard";
+@import "reminders";
 
 
 *,*:focus,*:hover{
@@ -78,7 +79,11 @@ a{
   src:font-url('OpenSans/OpenSans-SemiBold.ttf');
 } 
 
-
+.fc .fc-toolbar-title {
+  font-size: 1.25em;
+  margin: 0;
+  color:#565492;
+}
 
 
 .custom_gritter_notice {

@@ -3,17 +3,53 @@
 <%= render "shared/app_sidebar" %>
 
 <section id="main-dashboard-content">
-  <h2 id="welcome-title">Single Month View</h1>
-  <p class="welcome-title-user"> Hi, Chris </p>
+<p class="welcome-title-user"> Hi, Chris </p>
+  <h2 id="welcome-title">Your reminders</h1>
+  
   <section id="properties-section">
     <div class="properties-actions">
     </div>
 
   </section>
-  <section>
-    <%= content_tag :div, data: { controller: "calendar" } do %>
-      <%= tag :div, data: { target: "calendar.calendar" } %>
-    <%end%>
+  <section id="calendar-section">
+    <%= content_tag :div, data: { controller: 'calendar' } do %>
+      <%= content_tag :div, class: 'modal', data: { target: 'calendar.modal' } do %>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <%= form_with model: @new_reminder, local: true do |form| %>
+              <div class="modal-body">
+                <div class="field">
+                  <%= form.label :what_dont_you_want_to_forget %>
+                  <%= form.text_field :title, placeholder: "Attend Brian's birthday" %>
+                </div>
+
+                <div class="field">
+                  <%= form.label :when_does_reminder_start? %>
+                  <%= form.text_field :start_time, data: { target: "calendar.start_time" }%>
+                </div>
+
+                <div class="field">
+                  <%= form.label :when_does_reminder_end? %>
+                  <%= form.text_field :end_time, data: { target: "calendar.end_time" } %>
+                </div>
+
+                <div class="field">
+                  <%= form.label :when_do_you_want_me_to_remind_you? %>
+                  <%= form.datetime_select :notification_time %>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <%= form.submit class: 'btn btn-primary' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+      <%= tag :div, data: { target: 'calendar.calendar' } %>
+    <% end %>
+    
   </section>
 </section>
 

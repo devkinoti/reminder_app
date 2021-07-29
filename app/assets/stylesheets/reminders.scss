@@ -1,3 +1,243 @@
-// Place all the styles related to the reminders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#sidebar{
+  z-index:1000;
+}
+.fc .fc-toolbar-title {
+  font-size: 1.05em;
+  margin: 0;
+  color:#565492;
+}
+
+.fc .fc-toolbar{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+}
+
+
+.fc-col-header{
+  background:#dce0f8;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  color:#565492;
+  border-top-left-radius:30px;
+  border-top-right-radius:30px;
+  
+}
+
+.fc-scrollgrid{
+  background:#fff;
+  border-top-left-radius:30px;
+  border-top-right-radius:30px;
+  
+
+}
+
+.fc-col-header-cell-cushion{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+.fc-daygrid-day-number{
+  height:25px;
+  width:25px;
+  background-color:#38c18f;
+  border-radius:50%;
+  text-align:center;
+  font-size:14px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px;
+  margin-right:10px;
+  color:#fff;
+}
+
+.fc-daygrid-day-number:hover{
+  transform: scale(1.25);
+  transition: all ease 0.2s;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child){
+  background-color:#565492;
+  border-top-left-radius:22px;
+  border-bottom-left-radius:22px;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:first-child){
+  background-color:#565492;
+  border-top-right-radius:22px;
+  border-bottom-right-radius:22px;
+}
+
+.fc .fc-button-primary:disabled{
+  border-radius:22px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+#calendar-section > div > div > div.fc-header-toolbar.fc-toolbar > div:nth-child(3) > button{
+  border-radius:22px;
+  padding-left:20px;
+  padding-right:20px;
+  background-color:#41a541;
+  border:none;
+  color:#fff;
+}
+
+#calendar-section > div > div > div.fc-header-toolbar.fc-toolbar > div:nth-child(2) > button{
+  background-color:#565492;
+  border-radius:22px;
+}
+
+#calendar-section > div > div > div.fc-header-toolbar.fc-toolbar > div:nth-child(2) > div > button.fc-dayGridMonth-button.fc-button.fc-button-primary.fc-button-active{
+  background-color:#3d3b6d;
+}
+
+.fc .fc-button-primary{
+  border-radius:22px;
+  padding-left:20px;
+  padding-right:20px;
+}
+
+/* Modals */
+
+.modal-open{
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, -25%);
+  -ms-transform: translate(0, -25%);
+  -o-transform: translate(0, -25%);
+  transform: translate(0, -25%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+.modal-content {
+  height:300px;
+  position: relative;
+  background-color:#fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  outline: 0;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #565492;
+}
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.modal-header .close {
+  margin-top: -2px;
+}
+.modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+.modal-body {
+  padding: 20px;
+  
+}
+.modal-footer {
+  padding: 15px;
+  text-align: left;
+}
+.modal-footer .btn + .btn {
+  margin-bottom: 0;
+  margin-left: 5px;
+}
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+  .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  .modal-sm {
+    width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+.clearfix:before,
+.clearfix:after,
+.modal-header:before,
+.modal-header:after,
+.modal-footer:before,
+.modal-footer:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.modal-header:after,
+.modal-footer:after {
+  clear: both;
+}
+
+
+
+
