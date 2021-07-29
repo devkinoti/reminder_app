@@ -28,11 +28,7 @@ class EventsController < ApplicationController
   end
 
   def update
-    if @event.update(event_params)
-      redirect_to dashboard_path, notice: 'Event was successfully updated.'
-    else
-      render :edit
-    end
+    @event.update(event_params)
   end
 
   def destroy

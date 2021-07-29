@@ -29,7 +29,7 @@ export default class extends Controller {
       eventDrop: function (info) {
         let data = _this.data(info)
         Rails.ajax({
-          type: 'PATCH',
+          type: 'PUT',
           url: info.event.url,
           data: new URLSearchParams(data).toString()
         })
