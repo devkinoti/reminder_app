@@ -71,12 +71,17 @@
 
                 <div class="field">
                   <%= form.label :start_time %>
-                  <%= form.datetime_field :start_time, data: { :target => 'calendar.start_time' } %>
+                  <%= form.text_field :start_time, data: { :target => 'calendar.start_time' } %>
                 </div>
 
                 <div class="field">
                   <%= form.label :end_time %>
-                  <%= form.datetime_field :end_time , data: { :target => 'calendar.end_time' } %>
+                  <%= form.text_field :end_time , data: { :target => 'calendar.end_time' } %>
+                </div>
+
+                <div class="field">
+                  <%= form.label :event_color %>
+                  <%= form.select :event_color, options_for_select(Event::COLORS, data: {:target => 'calendar.event_color'})%>
                 </div>
 
               </div>

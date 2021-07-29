@@ -5,3 +5,4 @@ json.show_url event_url(event, format: :html)
 json.start event.start_time.strftime(date_format)
 json.end event.end_time.strftime(date_format)
 json.allDay event.all_day
+json.color event.event_color
