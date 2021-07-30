@@ -59,3 +59,7 @@ group :development, :test do
   gem 'ffaker'
   gem 'shoulda-matchers'
 end
+
+group :test do
+  gem "capybara"
+end

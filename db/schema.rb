@@ -10,27 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_29_141446) do
+ActiveRecord::Schema.define(version: 2021_07_30_122331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "events", force: :cascade do |t|
-    t.string "title"
+    t.string "title", limit: 30
     t.boolean "all_day"
     t.datetime "start_time"
     t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "event_color"
-  end
-
-  create_table "reminders", force: :cascade do |t|
-    t.string "name", limit: 30
-    t.datetime "time"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "color"
   end
 
 end

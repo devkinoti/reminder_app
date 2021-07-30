@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
 
   get 'dashboard/index', as: :dashboard
+  root to: 'dashboard#index'
 end

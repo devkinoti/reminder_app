@@ -10,6 +10,9 @@ class Event < ApplicationRecord
     "purple"
   ]
 
+  # validations
+  validates :title, length: {maximum: 30, message: "reminder title way too long" }
+
   # scopes
   scope :reminder_times, ->(start_date, end_date) { where("start_time >= ? AND end_time <= ?", start_date, end_date)}
   scope :aquamarine_color_code, -> { where(event_color: "aquamarine").order(created_at: :desc) }
