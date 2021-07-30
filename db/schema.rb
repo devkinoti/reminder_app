@@ -26,13 +26,11 @@ ActiveRecord::Schema.define(version: 2021_07_29_141446) do
   end
 
   create_table "reminders", force: :cascade do |t|
-    t.string "title", limit: 30
-    t.datetime "start_time"
+    t.string "name", limit: 30
+    t.datetime "time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "end_time"
-    t.boolean "all_day"
-    t.datetime "notification_time"
+    t.string "color"
   end
 
 end

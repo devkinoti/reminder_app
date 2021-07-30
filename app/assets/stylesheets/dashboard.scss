@@ -29,22 +29,6 @@ body{
   transition: 400ms width;
 }
 
-// #sidebar::-webkit-scrollbar{
-//   width:8px;
-// }
-
-// #sidebar::-webkit-scrollbar-track{
-//   background:#e4e7fa;
-// }
-
-
-// #sidebar::-webkit-scrollbar-thumb {
-//   border-radius: 10px;
-//   background:#afbbe7;
-   
-// }
-
-
 
 .title-container{
   display:flex;
@@ -315,7 +299,7 @@ body{
 }
 
 
-.income > .summary-title{
+.all-reminders > .summary-title{
   margin-left: 20px;
   color:#2cb777;
   font-size:18px;
@@ -323,13 +307,6 @@ body{
   margin-top:-5px;
 }
 
-.income > .paybill-summary-title{
-  margin-left: 20px;
-  color:#2cb777;
-  font-size:18px;
-  font-weight:500;
-  margin-top:-5px;
-}
 
 .month-date{
   color:#878694;
@@ -338,7 +315,7 @@ body{
   margin-left:5px;
 }
 
-.income-data{
+.reminder-data{
   display:flex;
   align-items:center;
   margin-top:10px;
@@ -347,33 +324,26 @@ body{
 
 }
 
-.income-icon{
+.reminder-icon{
   margin-left:-40px;
 }
 
-.income-details > .details-numbers{
+.reminder-details > .details-numbers{
   color:#2cb777;
   font-family: "OpenSans-SemiBold";
   font-size:18px;
   margin-bottom:5px;
 }
 
-.income-details > .paybill-details-numbers{
-  color:#2cb777;
-  font-family: "OpenSans-SemiBold";
-  font-size:18px;
-  margin-bottom:5px;
-}
 
-.income-details > .details-link{
+.reminder-details > .details-link{
   font-size:14px;
   text-decoration:none;
   color:#565492;
 }
 
 
-/* Expenses Summary tab */
-.expenses > .summary-title{
+.past-reminders > .summary-title{
   margin-left: 20px;
   color:#d82919;
   font-size:18px;
@@ -388,7 +358,7 @@ body{
   margin-left:5px;
 }
 
-.expense-data{
+.past-reminders-data{
   display:flex;
   align-items:center;
   margin-top:10px;
@@ -397,26 +367,25 @@ body{
 
 }
 
-.expense-icon{
+.past-reminders-icon{
   margin-left:-40px;
 }
 
-.expense-details > .details-numbers{
+.past-reminders-details > .details-numbers{
   color:#d82919;
   font-family: "OpenSans-SemiBold";
   font-size:18px;
   margin-bottom:5px;
 }
 
-.expense-details > .details-link{
+.past-reminders-details > .details-link{
   font-size:14px;
   text-decoration:underline;
   color:#565492;
 }
 
-/* Past Due Transactions */
-/* Expenses Summary tab */
-.due-transactions > .summary-title{
+
+.active-reminders > .summary-title{
   margin-left: 20px;
   color:#565492;
   font-size:18px;
@@ -431,7 +400,7 @@ body{
   margin-left:5px;
 }
 
-.due-transactions-data{
+.active-reminders-data{
   display:flex;
   align-items:center;
   margin-top:10px;
@@ -440,170 +409,24 @@ body{
 
 }
 
-.due-transactions-icon{
+.active-reminders-icon{
   margin-left:-45px;
 }
 
-.due-transactions-details > .details-numbers{
+.active-reminders-details > .details-numbers{
   color:#565492;
   font-family: "OpenSans-SemiBold";
   font-size:18px;
   margin-bottom:5px;
 }
 
-.due-transactions-details > .details-link{
+.active-reminders-details > .details-link{
   font-size:14px;
   text-decoration:underline;
   color:#565492;
 }
 
 
-.quick-create-actions{
-  display:grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  margin:5px;
-}
-
-.quick-action-tenant{
-  margin:10px;
-}
-
-.quick-action-property{
-  margin:10px;
-}
-
-.new-tenant-icon,
-.new-property-icon,
-.new-expense-icon,
-.new-staff-icon,
-.new-request-icon
-{
-  display:flex;
-  justify-content: center;
-
-}
-
-.quick-action-link{
-  display:flex;
-  justify-content: center;
-  text-align:center;
-  margin-top:5px;
-  margin-bottom:5px;
-  color:#565492;
-  font-size:14px;
-
-
-}
-
-.quick-action-link a{
-  text-decoration:none;
-  color:#565492;
-  padding-top:2px;
-  padding-left:5px;
-  padding-right:5px;
-  padding-bottom:2px;
-  border-radius:10px;
-}
-
-.quick-action-link a:hover{
-  background:#ced3ee;
-}
-.quick-action-link a:focus{
-  color:#565492;
-}
-
-.quick-action-link a:active{
-  color:#565492;
-}
-
-.quick-action-link a:link{
-  color:#565492;
-}
-.quick-action-expense{
-  margin:10px;
-}
-
-.quick-action-staff{
-  margin:10px;
-}
-
-.quick-action-request{
-  margin:10px;
-}
-
-
-.vacancy-data-container{
-  display:flex;
-  align-items:center;
-  justify-content: space-evenly;
-  margin-top:20px;
-
-}
-
-.vacancies-chart{
-  box-sizing:border-box;
-
-}
-.vacancy-data{
-  box-sizing: border-box;
-  margin-left:10px;
-}
-
-.vacancy-data > .total-units{
-  margin-bottom:10px;
-  font-size:18px;
-  color:#565492;
-}
-
-.vacancy-data > .vacant{
-  font-size:18px;
-  color:#565492;
-}
-
-
-.lease-data-container{
-  display:flex;
-  align-items:center;
-  justify-content: space-evenly;
-  margin-top:20px;
-}
-
-
-.active-leases,
-.inactive-leases,
-.pending-leases{
-  display:flex;
-  align-items:center;
-  margin-bottom:10px;
-}
-
-.active-lease-dot, 
-.inactive-lease-dot,
-.pending-lease-dot{
-  height:18px;
-  width:18px;
-  margin-right:10px;
-  background-color:#78da0c;
-  border-radius:50%;
-  align-items: center;
-  display: inline-block;
-}
-
-.active-lease-dot{
-  background-color:#78da0c;
-}
-
-.pending-lease-dot{
-  background-color:#da4234;
-}
-
-.inactive-lease-dot{
-  background-color: #878694;
-}
-
-#activities-section{
-  margin-bottom:20px;
-}
 #system-activities-container{
   margin-top:40px;
   display:grid;

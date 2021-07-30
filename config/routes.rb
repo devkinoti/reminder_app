@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   end
 
   get 'dashboard/index', as: :dashboard
-  resources :reminders
 end

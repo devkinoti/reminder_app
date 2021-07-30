@@ -5,37 +5,37 @@
 <section id="main-dashboard-content">
     <h2 id="welcome-title">Dashboard</h1>
     <section id="grid-summary-container">
-        <div class="grid-summary-item income">
+        <div class="grid-summary-item all-reminders">
             <div class="summary-title">All Reminders <span class="month-percentage">Total Reminders</span> </div>
-            <div class="income-data">
-                <div class="income-icon">
+            <div class="reminder-data">
+                <div class="reminder-icon">
                     <%= image_tag 'reminder.png',alt: "reminder_icon" %>
                 </div>
-                <div class="income-details">
+                <div class="reminder-details">
                     <div class="details-numbers"><%= pluralize(@total_reminders, "reminder") %></div>
                     <div class="details-link">View all reminders</div>
                 </div>
             </div>
         </div>
-        <div class="grid-summary-item expenses">
+        <div class="grid-summary-item past-reminders">
             <div class="summary-title">Past Reminders <span class="month-percentage">past reminders</span> </div>
-            <div class="expense-data">
-                <div class="expense-icon">
+            <div class="past-reminders-data">
+                <div class="past-reminders-icon">
                     <%= image_tag 'past_reminders.png',alt: "past_reminder_icon" %>
                 </div>
-                <div class="expense-details">
+                <div class="past-reminders-details">
                     <div class="details-numbers"><%= pluralize(@total_past_reminders,"reminder")%></div>
                     <div class="details-link">View all past</div>
                 </div>
             </div>
         </div>
-        <div class="grid-summary-item due-transactions">
+        <div class="grid-summary-item active-reminders">
             <div class="summary-title">Active Reminders</div>
-            <div class="due-transactions-data">
-                <div class="due-transactions-icon">
+            <div class="active-reminders-data">
+                <div class="active-reminders-icon">
                     <%= image_tag 'due_transactions_icon.png',alt: "due_transactions_icon" %>
                 </div>
-                <div class="due-transactions-details">
+                <div class="active-reminders-details">
                     <div class="details-numbers"><%= pluralize(@total_active_reminders,"reminder")%></div>
                     <div class="details-link">View all active</div>
                 </div>
