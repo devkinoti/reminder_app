@@ -1,6 +1,20 @@
-<h1>Editing Event</h1>
+<% provide(:title, "Edit Reminder") %>
 
-<%= render 'form', event: @event %>
+<%= render "shared/app_sidebar.html.erb" %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+<section id="main-dashboard-content">
+    <section id="properties-section">
+        <div class="properties-title">Manually Edit <%= @event.title.capitalize %> Reminder</div>
+    </section>
+    <section id="properties-form-container">
+        <div class="empty-space">
+        </div>
+        <%= render 'form', event: @event %>
+        
+        <div class="empty-space">
+        </div>
+    </section>
+    
+
+    
+</section>

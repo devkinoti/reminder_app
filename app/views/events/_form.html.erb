@@ -1,37 +1,49 @@
 <%= form_with(model: event) do |form| %>
   <% if event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-        <% event.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+    <% event.errors.full_messages.each do |error| %>
+        <%= js add_gritter(error, :title => "BuzzMinder App", :sticky => false,:class_name => "custom_gritter_error", :time => 4500 ) %>
+    <%end%>
   <% end %>
+  <div class="properties-main-form-section">
+    <div class="properties-form-general-information">
+      <div class="property-general-information-title">Reminder</div>
+      <div class="property-general-name-row">
+        <div class="field">
+          <%= form_group_for form, :what_would_you_like_me_to_remind_you? do %>
+            <%= form.text_field :title %>
+          <%end%>
+        </div>
+        <div class="field">
+          <%= form_group_for form, :is_this_an_all_day_reminder? do %>
+            <%= form.check_box :all_day, class: "modal_checkbox" %>
+          <%end%>
+        </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :all_day %>
-    <%= form.check_box :all_day %>
-  </div>
-
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.datetime_select :end_time %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      </div>
+      <div class="property-general-name-row">
+        <div class="field">
+          <%= form_group_for form, :what_time_would_you_like_to_start_the_reminder? do %>
+            <%= form.datetime_field :start_time, data: { :target => 'calendar.start_time' } %>
+          <%end%>
+        </div>
+        <div class="field">
+          <%= form_group_for form, :what_time_would_you_like_to_stop_the_reminder? do %>
+            <%= form.datetime_field :end_time , data: { :target => 'calendar.end_time' } %>
+          <%end%>
+        </div>
+      </div>
+      <div class="property-general-name-row">
+        <div class="field">
+          <%= form_group_for form, :lets_color_code_the_reminder do %>
+            <%= form.select :event_color, options_for_select(Event::COLORS, event.event_color)%>
+          <%end%>
+        </div>
+      </div>
+      <div class="property-form-actions">
+        <%= form.submit class: "submit-btn" %>
+        <%= link_to "Cancel", event_path(event) ,class: "cancel-btn" %>
+        <%= link_to "Return to Dashboard", dashboard_path, class: "return-to-dashboard-btn"%>
+      </div>
+    </div>
+<%end%>
+</div>

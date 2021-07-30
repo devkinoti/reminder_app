@@ -1,10 +1,10 @@
-<% provide(:title, "All Reminders") %>
+<% provide(:title, "All Aquamarine Reminders") %>
 
 <%= render "shared/app_sidebar" %>
 
 <section id="main-dashboard-content">
   <p class="welcome-title-user"> Hi, Chris </p>
-  <h2 id="welcome-title">All Your reminders</h1>
+  <h2 id="welcome-title">All Your Purple reminders</h1>
     <section id="properties-section">
         <div class="properties-actions">
             <%= link_to "Return to Calendar", dashboard_path,class: "property-return-to-dashboard-btn"%>
@@ -14,7 +14,7 @@
     
     <section id="system-activities">
         <div id="system-activities-container">
-        <% @all_reminders.each do |reminder| %>
+        <% @purple_reminders.each do |reminder| %>
           <div class="system-activity-icon">
             <%= image_tag "reminder.png", alt: "system_activity_icon" %>
           </div>
@@ -41,8 +41,6 @@
         </div>
     </section>
     <section class="pagination digg_pagination">
-      <%= will_paginate @all_reminders %>
+      <%= will_paginate @purple_reminders %>
     </section>
 </section>
-
-

@@ -2,6 +2,7 @@
 @import "normalize";
 @import "dashboard";
 @import "reminders";
+@import "events";
 
 
 *,*:focus,*:hover{
@@ -327,4 +328,94 @@ text-indent: -9999px;
 .gritter-with-image {
   width:220px;
   float:right;
+}
+
+.pagination{
+  display:flex;
+  margin-top:20px;
+  margin-bottom:20px;
+  align-items:center;
+  
+}
+
+.digg_pagination {
+  cursor: default;
+  font-size:18px;
+    /* self-clearing method: */ 
+}
+
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px; 
+}
+.digg_pagination .disabled {
+  display:none;
+  // color: #999999;
+  // border: 1px solid #dddddd; 
+  // margin-right:10px;
+  // margin-left:10px;
+  // margin-bottom:10px;
+  // border-radius:22px;
+  
+
+}
+
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #47548d;
+  color: white;
+  border: 1px solid #47548d; 
+  border-radius:200px;
+}
+
+.digg_pagination .previous_page {
+  padding-right:10px;
+  padding-bottom:7px;
+  padding-top:5px;
+  padding-left:10px;
+}
+
+.digg_pagination .next_page {
+  padding-right:10px;
+  padding-bottom:7px;
+  padding-top:5px;
+  padding-left:10px;
+}
+
+.digg_pagination a {
+  text-decoration: none;
+  color: #47548d;
+  border: 1px solid #47548d; 
+  border-radius:200px;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: #344075;
+  border-color: #344075; 
+  background-color:#e0e4f3;
+}
+
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; 
+}
+
+* html .digg_pagination {
+  height: 1%; 
+}
+
+*:first-child + html .digg_pagination {
+  overflow: hidden;
+}
+
+.help-block{
+  color:#d42222;
 }

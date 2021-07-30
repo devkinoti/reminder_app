@@ -1,3 +1,601 @@
-// Place all the styles related to the events controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#employees-section{
+  display:flex;
+  margin-top:20px;
+  align-items:center;
+  justify-content:space-between;   
+}
+
+.employees-title{
+  font-size: 24px;
+  margin:20px 5px;
+  color:#565492;
+  font-family:"Lato-Bold";  
+}
+
+#employees-total{
+  font-size:16px;
+  font-family:"Lato-Regular";
+  margin-left:30px; 
+}
+
+.employees-actions{
+  display:flex;
+  
+
+}
+
+.employees-actions > .input-box {
+  margin-right:20px;
+  width:200px;
+}
+
+.filter-employees-btn{
+  margin-right:20px;
+  color:#565492;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#fff;
+}
+
+.filter-employees-btn:hover{
+  background-color:#565492;
+  color:#fff;
+}
+
+.paid-status{
+  color:#2b852b;
+  background:#cef0ce;
+  border-radius:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.not-paid-status{
+  color:#852b2b;
+  background:#f0cece;
+  border-radius:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.import-employees-btn{
+  margin-right:20px;
+  color:#565492;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#fff;
+}
+
+.import-employees-btn:hover{
+  background-color:#565492;
+  color:#fff;
+}
+
+.add-tenant-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: #41a541;
+}
+
+.add-tenant-btn:hover{
+  background-color:#2b852b;
+  color:#fff;
+}
+
+.employee-expense-amount{
+  background:#b42b2b;
+  padding-top:5px;
+  box-sizing: border-box;
+  padding-left:10px;
+  padding-right:10px;
+  border-radius:10px;
+  color:#fff;
+  font-size: 14px;
+}
+
+
+#employees-container{
+  display:grid;
+  grid-template-columns: 1fr 3fr; 
+  gap:20px;
+  margin-top:20px;
+  box-sizing:border-box;
+}
+
+.all-employees-list{
+  height: 500px;
+  //box-shadow: 2px 3px 5px 2px rgba(153,172,204,0.16);
+  box-sizing:border-box;
+  background:#fff;
+  border-radius:10px;
+  // overflow-y:scroll;
+
+}
+
+#properties-section{
+  display:flex;
+  margin-top:20px;
+  align-items:center;
+  justify-content:space-between;
+  margin-left:5px;
+}
+
+.properties-title{
+  font-size: 24px;
+  margin:20px 5px;
+  color:#565492;
+  font-family:"Lato-Bold";
+}
+
+#properties-form-container{
+  display:grid;
+  grid-template-columns: 0.25fr 4fr 0.25fr; 
+  gap:20px;
+  margin-top:20px;
+  box-sizing:border-box;
+  margin-bottom:20px;
+}
+
+.properties-main-form-section{
+  display:grid;
+  grid-template-columns: 1fr;
+  box-sizing:border-box;
+  height: 300px;
+ 
+  
+
+}
+
+.properties-form-general-information{
+  // box-shadow: 2px 3px 5px 2px rgba(153,172,204,0.16);
+  box-sizing:border-box;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  margin-bottom:60px;
+}
+
+.property-general-information-title{
+  margin-left:20px;
+  color:#565492;
+}
+
+.property-general-name-row{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:20px;
+}
+
+
+.property-general-name-row{
+  margin-top:20px;
+  margin-bottom:20px;
+  margin-left:20px;
+  margin-right:20px;
+}
+
+.property-general-name-row > .field input[type=text],
+.property-general-name-row > .field input[type=date],
+.property-general-name-row > .field input[type=datetime-local],
+.property-general-name-row > .field input[type=number]{
+  width:100%;
+  padding:15px;
+  margin:8px 0;
+  box-sizing: border-box;
+  border-radius:10px;
+  border:0px;
+  background:rgb(238, 239, 248);
+  color:#565492;
+
+}
+
+.property-general-name-row input[type=checkbox]{
+  width:20px;
+  height:20px;
+  display:flex;
+  margin:8px 0;
+  box-sizing: border-box;
+}
+
+.property-general-name-row select{
+  width:100%;
+  padding:15px;
+  margin:8px 0;
+  box-sizing: border-box;
+  border-radius:10px;
+  border:0px;
+  background:rgb(238, 239, 248);
+  color:#565492;
+
+}
+
+.return-to-dashboard-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:10px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#615ea8;
+}
+
+.return-to-dashboard-btn:hover{
+  background-color:#565492;
+  color:#fff;
+}
+
+.tenant-action-btn{
+  width:220px;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-weight: 300;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#565492;  
+  text-align:center;
+  margin-right:10px;
+}
+
+.tenant-action-btn:hover{
+  background-color:#5f5da1;
+  color:#fff;
+}
+
+.tenant-archive-btn{
+  width:220px;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-weight: 300;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#ff835e; 
+  text-align:center;
+  margin-right:10px;
+}
+
+.tenant-archive-btn:hover{
+  background-color:#d1603e;
+  color:#fff;
+}
+
+.tenant-delete-btn{
+  width:220px;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-weight: 300;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#d43939; 
+  text-align:center;
+  margin-right:10px;
+}
+
+.tenant-delete-btn:hover{
+  background-color:#d43939;
+  color:#fff;
+}
+
+
+.employee-emergency-contact{
+  margin-top:20px;
+}
+
+
+// .all-employees-list::-webkit-scrollbar{
+//   width:8px;
+// }
+
+// .all-employees-list::-webkit-scrollbar-track{
+//   background:#e4e7fa;
+// }
+
+
+// .all-employees-list::-webkit-scrollbar-thumb {
+//   border-radius: 10px;
+//   background:#afbbe7;
+   
+// }
+
+.employee-data{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-top:20px;
+  padding-bottom:20px;
+  margin-bottom:5px; 
+}
+
+.employee-data:hover{
+  background:#dce0f8;
+}
+
+.employee-profile-image{
+  width:86px;
+  height:64px;
+  margin-left:25px;
+}
+
+.employee-detail{
+  margin-left:25px;
+
+}
+
+.employee-name,
+.employee-property-name{
+  color:#565492;
+
+}
+
+
+
+.employee-property-name{
+  font-size:14px;
+  margin-top:8px;
+}
+
+
+
+.employee-detailed-info{
+  height: 100%;
+  //box-shadow: 2px 3px 5px 2px rgba(153,172,204,0.16);
+  box-sizing:border-box;
+  padding:20px;
+  background:#fff;
+  border-radius:10px;
+  display:flex;
+  text-align: left;
+
+  
+}
+
+.employee-general-info-title{
+  margin-bottom:20px;
+}
+
+.employee-info-profile-image{
+  width:258px;
+  height:192px;
+  margin-left:-30px;
+  margin-bottom:20px;
+}
+
+.employee-detailed-info-sidebar{
+  padding:20px;
+}
+
+.employee-detailed-info-tenant-sidebar{
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.employee-sidebar-info-wrapper{
+  margin-left:20px;
+  
+}
+
+.employee-sidebar-tenant-info-wrapper{
+  margin-top:30px;
+}
+
+.employee-deposit{
+  margin-bottom:20px;
+}
+
+.employee-notification-title,
+.employee-financial-title,
+.employee-outstanding-title,
+.employee-deposit-title{
+  font-size:12px;
+  margin-bottom:5px;
+  color:#565492;
+}
+
+.employee-notification-title{
+  margin-bottom:15px;
+}
+
+.employee-deposit-amount{
+  font-size:18px;
+  color:#41a541;
+  font-family: "OpenSans-Bold";
+  letter-spacing: 0.5px;
+}
+
+.employee-financial-statement a{
+  font-size:18px;
+  color:#41a541;
+  font-family: "Lato-Bold";
+  letter-spacing: 0.5px;
+}
+
+.employee-send-email{
+}
+
+.send-email-btn{
+  margin-top:40px;
+  color:#fff;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: #41a541;
+  text-decoration: none;
+}
+
+.employee-financial-statement:hover{
+  transform: scale(1.05);
+  transition: all ease 0.2s;
+
+}
+
+.employee-outstanding-amount{
+  font-size:18px;
+  color:#d43939;
+  font-family: "OpenSans-Bold";
+  letter-spacing: 0.5px;
+}
+
+.employee-outstanding-balance{
+  margin-bottom:20px;
+}
+
+.employee-financial-report{
+  margin-bottom:20px;
+}
+
+
+
+.employee-detailed-info-main-content{
+  //background:lightcoral;
+  margin-left:20px;
+}
+
+.employee-general-info{
+  display:flex;
+}
+
+.employee-emergency-title,
+.employee-general-info-title{
+  color:#565492;
+  font-family:"Lato-Bold";
+  font-size:16px;
+
+}
+
+.employee-name,
+.employee-address,
+.employee-phone,
+.employee-birth-date,
+.employee-gender,
+.employee-email-address,
+.employee-emergency-contact-name{
+  margin-bottom:25px;
+}
+
+
+.employee-full-name-title,
+.employee-dob-title,
+.employee-address-title,
+.employee-phone-title,
+.employee-gender-title,
+.employee-email-title
+{
+  color:#636367;
+  font-size:14px;
+  margin-bottom:5px;
+}
+
+.employee-name-full{
+  color: #565492;
+  font-family: "Lato-Bold";
+  font-size: 16px;
+}
+
+.emergency-contact{
+  margin-top:20px;
+}
+
+.employee-emergency-title{
+  margin-bottom:5px;
+}
+
+.employee-general-info-column-2{
+  margin-left:80px;
+}
+
+
+.employee-data-options{
+  margin-bottom:40px;
+}
+
+
+.employee-request-btn,
+.employee-lease-btn,
+.employee-profile-btn{
+  margin-right:20px;
+  color:#565492;
+  border-radius:5px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#dce0f8;
+}
+
+.employee-request-btn:hover,
+.employee-lease-btn:hover,
+.employee-profile-btn:hover{
+  background-color:#565492;
+  color:#fff;
+}
+
+.import-employees-btn{
+  margin-right:20px;
+  color:#565492;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#fff;
+}
+
+.import-employees-btn:hover{
+  background-color:#565492;
+  color:#fff;
+}
+
+.employee-accounting-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:5px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: #ff835e;
+}
+
+.employee-accounting-btn:hover{
+  background-color:#d1603e;
+  color:#fff;
+}
+
+
+.tenant-property-actions{
+  display:flex;
+  margin-bottom:20px;
+}
+
+
+@media (max-width:1366px) {
+  #employees-section{
+      display:flex;
+      flex-direction: column;
+      margin-bottom:20px;
+  }
+  
+
+}

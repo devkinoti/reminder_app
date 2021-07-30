@@ -1,12 +1,12 @@
 <section id="sidebar">
     <section class="title-container">
-       <div class="logo-big-screens"><%= image_tag "rent_logo.png"%></div>
-       <div class="logo-small-screens"><%= image_tag "rent_logo_min.png" %></div>
+       <div class="logo-big-screens"><%= image_tag "buzzminder_logo.png"%></div>
+       <div class="logo-small-screens"><%= image_tag "buzzminder_min.png" %></div>
         
     </section>
     <span class="line"></span>
     <section class="user-profile">
-        <%= image_tag "user_profile.png", class: "user-avatar-image" %>
+        <%= image_tag "tenant_user_final.png", class: "user-avatar-image" %>
         <p class="name">devkinoti@gmail.com</p>
         <p class="role">User<span class="dot"></span></p>
     </section>
@@ -22,7 +22,7 @@
             <div class="icon">
                 <%= image_tag "properties_icon.png", alt: "properties" %>
             </div>
-            <span><%= link_to "All Reminders", "#" %></span>
+            <span><%= link_to "All Reminders", events_path %></span>
         </div>
         <div class="links">
             <div class="icon">

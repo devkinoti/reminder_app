@@ -109,6 +109,37 @@
   border-radius:50px;
 }
 
+.property-return-to-dashboard-btn{
+  width:220px;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  font-weight: 300;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#6671ad;
+  text-align:center;
+  margin-right:10px;
+}
+
+.property-return-to-dashboard-btn:hover{
+  background-color:#615ea8;
+  color:#fff;
+}
+
+
+.add-property-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:20px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color: #41a541;
+  text-decoration: none;
+}
+
 /* Modals */
 
 .modal-open{
@@ -153,7 +184,7 @@
   margin: 10px;
 }
 .modal-content {
-  height:300px;
+  height:500px;
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -195,9 +226,80 @@
   padding: 20px;
   
 }
+
+.modal-body > .field input[type=text],
+.modal-body > .field input[type=datetime-local]{
+  width:100%;
+  padding:15px;
+  margin:8px 0;
+  box-sizing: border-box;
+  border-radius:10px;
+  border:0px;
+  background:rgb(238, 239, 248);
+  color:#565492;
+}
+
+.modal-body input[type=checkbox]{
+  width:20px;
+  height:20px;
+  display:flex;
+  margin:8px 0;
+  box-sizing: border-box;
+}
+
+.cancel-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:10px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#d42222;
+}
+
+.cancel-btn:hover{
+  background-color:#a03434;
+  color:#fff;
+}
+
+.submit-btn{
+  margin-right:20px;
+  color:#fff;
+  border-radius:10px;
+  border:none;
+  font-weight:300;
+  padding:10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  background-color:#41a541;
+}
+
+.submit-btn:hover{
+  background-color:#2b852b;
+  color:#fff;
+}
+
+.user-image{
+  background-color:lightcoral;
+  align-items:center;
+}
+
+
+
+.modal-body select{
+  width:100%;
+  padding:15px;
+  margin:8px 0;
+  box-sizing: border-box;
+  border-radius:10px;
+  border:0px;
+  background:rgb(238, 239, 248);
+  color:#565492;
+}
+
 .modal-footer {
   padding: 15px;
-  text-align: left;
+  text-align: right;
 }
 .modal-footer .btn + .btn {
   margin-bottom: 0;
@@ -252,3 +354,14 @@
 
 
 
+.reminder-dot{
+  height:10px;
+  width:30px;
+  margin-left:5px;
+  margin-top:1px;
+  background-color:#78da0c;
+  border-radius:22px;
+  align-items: center;
+  display: inline-block;
+  transition:all 400ms ease-in-out;
+}

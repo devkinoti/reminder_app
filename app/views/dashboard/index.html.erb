@@ -60,33 +60,34 @@
             <%= form_with model: Event.new, local: true do |form| %>
               <div class="modal-body">
                 <div class="field">
-                  <%= form.label :title %>
+                  <%= form.label :what_would_you_like_me_to_remind_you? %>
                   <%= form.text_field :title %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :all_day %>
-                  <%= form.check_box :all_day %>
+                  <%= form.label :is_this_an_all_day_reminder? %>
+                  <%= form.check_box :all_day, class: "modal_checkbox" %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :start_time %>
-                  <%= form.text_field :start_time, data: { :target => 'calendar.start_time' } %>
+                  <%= form.label :what_time_would_you_like_to_start_the_reminder? %>
+                  <%= form.datetime_field :start_time, data: { :target => 'calendar.start_time' } %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :end_time %>
-                  <%= form.text_field :end_time , data: { :target => 'calendar.end_time' } %>
+                  <%= form.label :what_time_would_you_like_to_stop_the_reminder? %>
+                  <%= form.datetime_field :end_time , data: { :target => 'calendar.end_time' } %>
                 </div>
 
                 <div class="field">
-                  <%= form.label :event_color %>
+                  <%= form.label :lets_color_code_the_reminder %>
                   <%= form.select :event_color, options_for_select(Event::COLORS, data: {:target => 'calendar.event_color'})%>
                 </div>
 
               </div>
               <div class="modal-footer">
-                <%= form.submit class: 'btn btn-primary' %>
+                <%= form.submit "Create Reminder",class: "submit-btn" %>
+                <%= link_to "Cancel", dashboard_path ,class: "cancel-btn" %>
               </div>
             <% end %>
           </div>
