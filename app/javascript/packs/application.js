@@ -8,6 +8,7 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "sweetalert"
+import moment from 'moment'
 
 Rails.start()
 Turbolinks.start()

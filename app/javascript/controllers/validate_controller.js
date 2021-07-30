@@ -1,6 +1,7 @@
 import { Controller } from "stimulus"
 import validate from 'validate.js'
 
+
 export default class extends Controller {
   static targets = ['form', 'submit', 'input']
 
@@ -23,8 +24,11 @@ export default class extends Controller {
     }
   }
 
+  
+
   constraints(){
-    var constraints = {}
+    var constraints = {
+    }
     for (let input of this.inputTargets) {
       constraints[input.name] = JSON.parse(input.getAttribute('data-validate'))
     }
