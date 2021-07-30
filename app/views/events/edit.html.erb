@@ -3,10 +3,10 @@
 <%= render "shared/app_sidebar.html.erb" %>
 
 <section id="main-dashboard-content">
-    <section id="properties-section">
-        <div class="properties-title">Manually Edit <%= @event.title.capitalize %> Reminder</div>
+    <section id="activities-section">
+        <div class="activities-title">Manually Edit <%= @event.title.capitalize %> Reminder</div>
     </section>
-    <section id="properties-form-container">
+    <section id="events-form-container">
         <div class="empty-space">
         </div>
         <%= render 'form', event: @event %>

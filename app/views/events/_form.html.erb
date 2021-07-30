@@ -4,10 +4,10 @@
         <%= js add_gritter(error, :title => "BuzzMinder App", :sticky => false,:class_name => "custom_gritter_error", :time => 4500 ) %>
     <%end%>
   <% end %>
-  <div class="properties-main-form-section">
-    <div class="properties-form-general-information">
-      <div class="property-general-information-title">Reminder</div>
-      <div class="property-general-name-row">
+  <div class="events-main-form-section">
+    <div class="events-form-general-information">
+      <div class="event-general-information-title">Reminder</div>
+      <div class="event-general-name-row">
         <div class="field">
           <%= form_group_for form, :what_would_you_like_me_to_remind_you? do %>
             <%= form.text_field :title %>
@@ -20,7 +20,7 @@
         </div>
 
       </div>
-      <div class="property-general-name-row">
+      <div class="event-general-name-row">
         <div class="field">
           <%= form_group_for form, :what_time_would_you_like_to_start_the_reminder? do %>
             <%= form.datetime_field :start_time, data: { :target => 'calendar.start_time' } %>
@@ -32,7 +32,7 @@
           <%end%>
         </div>
       </div>
-      <div class="property-general-name-row">
+      <div class="event-general-name-row">
         <div class="field">
           <%= form_group_for form, :lets_color_code_the_reminder do %>
             <%= form.select :event_color, options_for_select(Event::COLORS, event.event_color)%>

@@ -5,9 +5,9 @@
 <section id="main-dashboard-content">
   <p class="welcome-title-user"> Hi, Chris </p>
   <h2 id="welcome-title">All Your reminders</h1>
-    <section id="properties-section">
-        <div class="properties-actions">
-            <%= link_to "Return to Calendar", dashboard_path,class: "property-return-to-dashboard-btn"%>
+    <section id="activities-section">
+        <div class="activities-actions">
+            <%= link_to "Return to Calendar", dashboard_path,class: "event-return-to-dashboard-btn"%>
         </div>
     </section>
 
@@ -33,7 +33,7 @@
                 </div>
               </div>
               <div class="system-activity-actions">
-                <%= link_to "View", reminder, class: "add-property-btn" %>
+                <%= link_to "View", reminder, class: "view-event-btn" %>
               </div>
             </div>
           </div>

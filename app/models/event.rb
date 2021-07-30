@@ -20,4 +20,10 @@ class Event < ApplicationRecord
   scope :lightcoral_color_code, -> { where(event_color: "lightcoral").order(created_at: :desc) }
   scope :lightsalmon_color_code, -> { where(event_color: "lightsalmon").order(created_at: :desc) }
   scope :purple_color_code, -> { where(event_color: "purple").order(created_at: :desc) }
+  scope :total_past_reminders, -> { where("end_time < ?",  Time.now).count }
+  scope :total_active_reminders, -> { where("start_time >= ? OR end_time >= ?", Time.now, Time.now).count }
+
+  def self.total_reminders
+    self.count
+  end
 end

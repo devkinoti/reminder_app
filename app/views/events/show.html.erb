@@ -6,98 +6,98 @@
   <p class="welcome-title-user"> Hi, Chris </p>
   <h2 id="welcome-title">Your <%= @event.title %> reminder </h1>
   
-    <section id="properties-section">
-        <div class="properties-actions">
-            <%= link_to "Return to Calendar", dashboard_path,class: "property-return-to-dashboard-btn"%>
+    <section id="activities-section">
+        <div class="activities-actions">
+            <%= link_to "Return to Calendar", dashboard_path,class: "event-return-to-dashboard-btn"%>
         </div>
     </section>
-        <section id="employees-container">
-          <div class="all-employees-list">
-            <div class="employee-detailed-info-sidebar">
-              <div class="employee-sidebar-info-wrapper">
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">Aquamarine Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "Aquamarine", aquamarine_events_path %><span class="reminder-dot" style="background-color:aquamarine"></div>
+        <section id="events-container">
+          <div class="all-events-list">
+            <div class="event-detailed-info-sidebar">
+              <div class="event-sidebar-info-wrapper">
+                <div class="event-collection">
+                  <div class="event-collection-title">Aquamarine Reminders</div>
+                  <div class="event-collection-link"><%= link_to "Aquamarine", aquamarine_events_path %><span class="reminder-dot" style="background-color:aquamarine"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">DarkSlateBlue Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "DarkSlateBlue", darkslateblue_events_path %><span class="reminder-dot" style="background-color:darkslateblue"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">DarkSlateBlue Reminders</div>
+                  <div class="event-collection-link"><%= link_to "DarkSlateBlue", darkslateblue_events_path %><span class="reminder-dot" style="background-color:darkslateblue"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">DeepSkyBlue Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "DeepSkyBlue", deepskyblue_events_path %><span class="reminder-dot" style="background-color:deepskyblue"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">DeepSkyBlue Reminders</div>
+                  <div class="event-collection-link"><%= link_to "DeepSkyBlue", deepskyblue_events_path %><span class="reminder-dot" style="background-color:deepskyblue"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">Dark Violet Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "DarkViolet", darkviolet_events_path %><span class="reminder-dot" style="background-color:darkviolet"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">Dark Violet Reminders</div>
+                  <div class="event-collection-link"><%= link_to "DarkViolet", darkviolet_events_path %><span class="reminder-dot" style="background-color:darkviolet"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">ForestGreen Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "ForestGreen", forestgreen_events_path %><span class="reminder-dot" style="background-color:forestgreen"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">ForestGreen Reminders</div>
+                  <div class="event-collection-link"><%= link_to "ForestGreen", forestgreen_events_path %><span class="reminder-dot" style="background-color:forestgreen"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">LightCoral Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "LightCoral", lightcoral_events_path %><span class="reminder-dot" style="background-color:lightcoral"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">LightCoral Reminders</div>
+                  <div class="event-collection-link"><%= link_to "LightCoral", lightcoral_events_path %><span class="reminder-dot" style="background-color:lightcoral"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">LightSalmon Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "LightSalmon", lightsalmon_events_path %><span class="reminder-dot" style="background-color:lightsalmon"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">LightSalmon Reminders</div>
+                  <div class="event-collection-link"><%= link_to "LightSalmon", lightsalmon_events_path %><span class="reminder-dot" style="background-color:lightsalmon"></div>
                 </div>
-                <div class="employee-financial-report">
-                  <div class="employee-financial-title">Purple Reminders</div>
-                  <div class="employee-financial-statement"><%= link_to "Purple", purple_events_path %><span class="reminder-dot" style="background-color:purple"></div>
+                <div class="event-collection">
+                  <div class="event-collection-title">Purple Reminders</div>
+                  <div class="event-collection-link"><%= link_to "Purple", purple_events_path %><span class="reminder-dot" style="background-color:purple"></div>
                 </div>
               
               </div>
             </div>
           </div>
-          <div class="employee-detailed-info">
-            <div class="employee-detailed-info-tenant-sidebar">
-              <%= image_tag "tenant_user_final.png", alt: "employee-profile-image" %>
+          <div class="event-detailed-info">
+            <div class="event-detailed-info-event-sidebar">
+              <%= image_tag "tenant_user_final.png", class: "event-user-profile-image" %>
                 
-              <div class="employee-sidebar-tenant-info-wrapper">
-                <div class="employee-notifications">
+              <div class="event-sidebar-event-info-wrapper">
+                <div class="event-notifications">
                   <% if @event.all_day? %>
-                    <span class="paid-status">All Day Reminder</span>
+                    <span class="allday-status">All Day Reminder</span>
                   <%else%>
-                    <span class="not-paid-status">One Time Reminder</span>
+                    <span class="onetime-status">One Time Reminder</span>
                   <%end%>
                 </div>
               </div>
             </div>
-            <div class="employee-detailed-info-main-content">
-              <div class="tenant-property-actions">
-                <%= link_to "Edit Reminder", edit_event_path(@event),class: "tenant-action-btn"%>
-                <%= link_to "Destroy Reminder", event_path(@event),method: :delete,data: {confirm: "Are you sure you want to delete this reminder?"},class: "tenant-archive-btn" %>
+            <div class="event-detailed-info-main-content">
+              <div class="event-object-actions">
+                <%= link_to "Edit Reminder", edit_event_path(@event),class: "event-action-btn"%>
+                <%= link_to "Destroy Reminder", event_path(@event),method: :delete,data: {confirm: "Are you sure you want to delete this reminder?"},class: "event-archive-btn" %>
               </div>
-              <div class="employee-general-info-title">Reminder Information</div>
-              <div class="employee-general-info">
-                <div class="employee-general-info-column-1">
-                  <div class="employee-name">
-                    <div class="employee-full-name-title">Reminder's Title</div>
-                    <div class="employee-name-full"><%= @event.title %></div>
+              <div class="event-general-info-title">Reminder Information</div>
+              <div class="event-general-info">
+                <div class="event-general-info-column-1">
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Reminder's Title</div>
+                    <div class="event-attribute-full"><%= @event.title %></div>
                   </div>
-                  <div class="employee-birth-date">
-                    <div class="employee-dob-title">Date Reminder was created</div>
-                    <div class="employee-name-full"><%= @event.created_at.strftime("%B %d, %Y at %I:%M %p")%></div>
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Date Reminder was created</div>
+                    <div class="event-attribute-full"><%= @event.created_at.strftime("%B %d, %Y at %I:%M %p")%></div>
                   </div>
-                  <div class="employee-address">
-                    <div class="employee-address-title">Date Reminder was updated</div>
-                    <div class="employee-name-full"><%= @event.updated_at.strftime("%B %d, %Y at %I:%M %p")%></div>
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Date Reminder was updated</div>
+                    <div class="event-attribute-full"><%= @event.updated_at.strftime("%B %d, %Y at %I:%M %p")%></div>
                   </div>
                 </div>
-                <div class="employee-general-info-column-2">
-                  <div class="employee-gender">
-                    <div class="employee-gender-title">Reminder's Color Code</div>
-                    <div class="employee-name-full"><%= @event.event_color %><span class="reminder-dot" style="background-color:<%= @event.event_color%>"></div>
+                <div class="event-general-info-column-2">
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Reminder's Color Code</div>
+                    <div class="event-attribute-full"><%= @event.event_color %><span class="reminder-dot" style="background-color:<%= @event.event_color%>"></div>
                   </div>
-                  <div class="employee-phone">
-                    <div class="employee-phone-title">Reminder's Starting Time</div>
-                    <div class="employee-name-full"><%= @event.start_time.strftime("%B %d, %Y at %I:%M %p")%></div>
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Reminder's Starting Time</div>
+                    <div class="event-attribute-full"><%= @event.start_time.strftime("%B %d, %Y at %I:%M %p")%></div>
                   </div>
-                  <div class="employee-phone">
-                    <div class="employee-phone-title">Reminder's Ending Time</div>
-                    <div class="employee-name-full"><%= @event.end_time.strftime("%B %d, %Y at %I:%M %p")%></div>
+                  <div class="event-attribute">
+                    <div class="event-attribute-title">Reminder's Ending Time</div>
+                    <div class="event-attribute-full"><%= @event.end_time.strftime("%B %d, %Y at %I:%M %p")%></div>
                   </div>
                 </div>
                 </div>

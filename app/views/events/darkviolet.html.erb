@@ -7,7 +7,7 @@
   <h2 id="welcome-title">All Your Dark Violet reminders</h1>
     <section id="properties-section">
         <div class="properties-actions">
-            <%= link_to "Return to Calendar", dashboard_path,class: "property-return-to-dashboard-btn"%>
+            <%= link_to "Return to Calendar", dashboard_path,class: "event-return-to-dashboard-btn"%>
         </div>
     </section>
 
@@ -15,28 +15,7 @@
     <section id="system-activities">
         <div id="system-activities-container">
         <% @darkviolet_reminders.each do |reminder| %>
-          <div class="system-activity-icon">
-            <%= image_tag "reminder.png", alt: "system_activity_icon" %>
-          </div>
-          <div class="system-activity">
-            <div class="system-activity-details">
-              <div class="system-activity-time">
-                <p>Created on</p>
-                <p><%= reminder.created_at.strftime("%B %d, %Y at %I:%M %p")%></p>
-              </div>
-              <div class="system-activity-info">
-                <div class="system-activity-user-action">           
-                  <p><%= reminder.title %><span class="reminder-dot" style="background-color:<%= reminder.event_color%>"></span></p>
-                </div>
-                <div class="system-activity-property-name">
-                  <p>created_by devise user</p>
-                </div>
-              </div>
-              <div class="system-activity-actions">
-                <%= link_to "View", reminder, class: "add-property-btn" %>
-              </div>
-            </div>
-          </div>
+          <%= render 'color_code_details', reminder: reminder %>
         <%end%>
         </div>
     </section>
