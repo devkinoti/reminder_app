@@ -63,3 +63,10 @@ end
 group :test do
   gem "capybara"
 end
+
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem 'sshkit', '~> 1.21', '>= 1.21.2'
+gem 'public_activity'
