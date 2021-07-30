@@ -1,0 +1,9 @@
+<% if flash[:alert] %>
+    <%= js add_gritter(flash[:alert], :title => "BuzzMinder", :position => :top_left, :sticky => false,:class_name => "custom_gritter_alert", :time => 4500) %>
+<% elsif flash[:error] %>
+    <%= js add_gritter(flash[:error], :title => "BuzzMinder", :sticky => false,:class_name => "custom_gritter_error", :time => 4500 ) %>
+<% elsif flash[:info] %>
+    <%= js add_gritter(flash[:info], :title => "BuzzMinder", :sticky => false,:position => :top_left,:class_name => "custom_gritter_info", :time => 4500 ) %>
+<% else %>
+    <%= js add_gritter(flash[:notice], :title => "BuzzMinder", :sticky => false,:position => :top_left,:class_name => "custom_gritter_notice", :time => 4500 ) %>
+<%end%>

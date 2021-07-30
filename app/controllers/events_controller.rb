@@ -63,6 +63,7 @@ class EventsController < ApplicationController
 
   def update
     @event.update(event_params)
+    flash[:notice] = "You are alright,just updated the reminder"
   end
 
   def destroy

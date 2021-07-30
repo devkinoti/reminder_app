@@ -10,6 +10,8 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
+    "gritter": "^1.7.4",
+    "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "preact": "^10.5.14",
     "stimulus": "^2.0.0",

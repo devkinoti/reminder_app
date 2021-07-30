@@ -12,5 +12,7 @@ import "sweetalert"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+require("jquery")
+require("gritter/js/jquery.gritter.js")
 
 import "controllers"
