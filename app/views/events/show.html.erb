@@ -68,7 +68,7 @@
             <div class="employee-detailed-info-main-content">
               <div class="tenant-property-actions">
                 <%= link_to "Edit Reminder", edit_event_path(@event),class: "tenant-action-btn"%>
-                <%= link_to "Destroy Reminder", "#",class: "tenant-archive-btn" %>
+                <%= link_to "Destroy Reminder", event_path(@event),method: :delete,data: {confirm: "Are you sure you want to delete this reminder?"},class: "tenant-archive-btn" %>
               </div>
               <div class="employee-general-info-title">Reminder Information</div>
               <div class="employee-general-info">

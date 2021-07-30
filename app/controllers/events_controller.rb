@@ -55,7 +55,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
 
     if @event.save
-      redirect_to dashboard_path, notice: 'Event was successfully created.'
+      redirect_to dashboard_path, notice: 'Awesome.Good to Go'
     else
       render :new
     end
@@ -67,7 +67,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to dashboard_path, notice: 'Event was successfully destroyed.'
+    redirect_to dashboard_path, notice: 'Reminder has been deleted'
   end
 
   private
