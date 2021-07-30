@@ -57,11 +57,11 @@
       <div class="modal" data-calendar-target="modal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
-            <%= form_with model: Event.new, local: true do |form| %>
+            <%= form_with model: Event.new, local: true, data: { controller: 'validate', target: 'validate.form'} do |form| %>
               <div class="modal-body">
                 <div class="field">
                   <%= form.label :what_would_you_like_me_to_remind_you? %>
-                  <%= form.text_field :title %>
+                  <%= form.text_field :title, data: { target: 'validate.input', validate: { presence: { message: 'Oops,I need to know what to remind you'}}} %>
                 </div>
 
                 <div class="field">
@@ -86,7 +86,7 @@
 
               </div>
               <div class="modal-footer">
-                <%= form.submit "Create Reminder",class: "submit-btn" %>
+                <%= form.submit "Create Reminder",class: "submit-btn",data: { action: 'validate#submitForm'} %>
                 <%= link_to "Cancel", dashboard_path ,class: "cancel-btn" %>
               </div>
             <% end %>

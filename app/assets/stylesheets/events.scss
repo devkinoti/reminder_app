@@ -65,6 +65,18 @@
   padding-right:10px;
 }
 
+.has-error > input {
+  border-color: #a94442;
+ }
+
+ .has-error > label {
+  color: #a94442;
+ }
+
+ .has-error > div {
+  color: #a94442;
+ }
+
 .import-employees-btn{
   margin-right:20px;
   color:#565492;
