@@ -15,7 +15,6 @@ export default class extends Controller {
       editable: true,
       navLinks: true,
       dayMaxEvents: true,
-      height: 'auto',
       headerToolbar: { center: 'dayGridMonth,timeGridDay' },
       plugins: [dayGridPlugin,timeGridPlugin,interactionPlugin],
       navLinkDayClick: function(date, jsEvent) {
